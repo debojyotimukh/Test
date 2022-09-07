@@ -10,6 +10,21 @@
             ],
             "runtimeExecutable": "ts-node",
             "program": "${file}",
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "args": [
+                "${workspaceFolder}/src/index.ts"
+            ],
+            "env": {
+                "TS_NODE_PROJECT": "<tsconfig.json>"
+            }
         }
     ]
 }
